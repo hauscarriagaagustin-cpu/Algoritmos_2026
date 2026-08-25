@@ -1,7 +1,7 @@
 from collections import deque
 from super_heroes_data import superheroes
 
-# ── Separador visual ─────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────
 def separador(titulo):
     print("\n" + "=" * 60)
     print(f"  {titulo}")
