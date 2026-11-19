@@ -1,14 +1,3 @@
-"""
-Ejercicio 5 - eliminar_arista(vertice, destino)
-
-Basado en graph.py y list_.py del repositorio algoritmos_2026.
-Este archivo es NUEVO: no modifica ninguno de los originales.
-
-Debe estar en la misma carpeta que list_.py (se importa List desde ahi).
-Se redefine la clase Graph aqui, con la misma estructura que en graph.py,
-porque importar graph.py ejecutaria su codigo de prueba (prints de Kruskal)
-al final del archivo.
-"""
 
 from typing import Any, Optional
 
@@ -85,29 +74,7 @@ class Graph(List):
     # EJERCICIO 5
     # ------------------------------------------------------------------
     def eliminar_arista(self, vertice: Any, destino: Any) -> Optional[Any]:
-        """
-        Elimina y devuelve la primera arista del `vertice` cuyo destino
-        coincida con `destino`.
-
-        Args:
-            vertice: valor del vertice del que se quiere eliminar la arista.
-            destino: valor del destino de la arista a eliminar.
-
-        Returns:
-            La arista eliminada (_nodeEdge), o None si el vertice no existe
-            o si no tiene ninguna arista hacia `destino`. En ese caso no se
-            elimina ningun elemento.
-
-        Notas:
-            - Se recorre la lista de aristas de forma secuencial en el orden
-              en que estan guardadas. No se usa List.search / delete_value
-              porque esos metodos ordenan la lista y hacen busqueda binaria,
-              y asi no se garantiza que la arista eliminada sea "la primera
-              que se encuentre" ni se preserva el orden de las aristas.
-            - Solo se elimina la arista del vertice indicado. En un grafo no
-              dirigido la arista inversa (destino -> vertice) se conserva;
-              a diferencia de delete_edge de graph.py, que elimina ambas.
-        """
+    
         pos_vertice = self.search(vertice, 'value')
         if pos_vertice is None:
             return None
